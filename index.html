@@ -118,16 +118,23 @@
         .logo {
             font-family: 'Noto Sans Georgian', sans-serif;
             font-weight: 700;
-            font-size: 1.8rem;
+            font-size: 1 rem;
             color: var(--primary);
             display: flex;
-            align-items: center;
+            flex-direction: column; /* Organiza os itens em coluna */
+            align-items: center; /* Centraliza os itens horizontalmente */
+            text-align: center; /* Centraliza o texto */
         }
 
         .logo-img {
-            height: 30px; /* Ajuste conforme o tamanho desejado */
+            height: 40px; /* Ajuste conforme o tamanho desejado */
             width: auto;
-            margin-right: 10px; /* Espaço entre a imagem e o texto */
+            margin-bottom: 5px; /* Espaço entre a imagem e o texto */
+        }
+
+        /* Se você adicionou a classe logo-text */
+        .logo-text {
+            display: block;
         }
         
         .nav-menu {
@@ -603,8 +610,8 @@
     <header>
         <div class="container nav-container">
             <a href="#" class="logo">
-                <img src="D:\BUG RUG\Estudos para logo\logo.svg" alt="Logo BugRug" class="logo-img">
-                BUG<span>RUG</span>
+                <img src="D:\BUG RUG\Estudos para logo\imagem_2025-03-05_131320444-removebg-preview.png" class="logo-img">
+                <span>Tufiting & Art</span>
             </a>
             
             <ul class="nav-menu">
