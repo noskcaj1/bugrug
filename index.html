@@ -18,6 +18,35 @@
             --shadow: rgba(0, 0, 0, 0.1);
         }
         
+        /* Base de tipografia responsiva */
+        html {
+          font-size: 16px; /* Tamanho base para cálculos rem */
+        }
+
+        @media (max-width: 1200px) {
+          html {
+            font-size: 15px;
+          }
+        }
+
+        @media (max-width: 992px) {
+          html {
+            font-size: 14px;
+          }
+        }
+
+        @media (max-width: 768px) {
+          html {
+            font-size: 13px;
+          }
+        }
+
+        @media (max-width: 576px) {
+          html {
+            font-size: 12px;
+          }
+        }
+        
         /* Reset e estilos base */
         * {
             margin: 0;
@@ -48,12 +77,12 @@
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 0 1.25rem;
         }
         
         .btn {
             display: inline-block;
-            padding: 12px 24px;
+            padding: 0.75rem 1.5rem;
             background-color: var(--accent);
             color: white;
             border: none;
@@ -81,7 +110,7 @@
         
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 3rem;
             position: relative;
             font-size: 2.5rem;
             font-weight: 700;
@@ -112,15 +141,14 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            padding: 0.5rem 0;
             background-image: url('images/banner1.jpg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            /* Adicione um overlay para garantir que o texto seja legível */
             position: relative;
         }
 
-        /* Opcional: adicionar um overlay para melhorar a legibilidade do texto */
         .nav-container::after {
             content: '';
             position: absolute;
@@ -128,53 +156,35 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(219, 225, 228, 0.7); /* Overlay semi-transparente */
+            background-color: rgba(219, 225, 228, 0.7);
             z-index: -1;
         }
         
-        /*.logo {
-            font-family: 'Noto Sans Georgian', sans-serif;
-            font-weight: 700;
-            font-size: 0.9rem;
-            color: var(--primary);
-            display: flex;
-            flex-direction: column; /* Organiza os itens em coluna
-            align-items: center; /* Centraliza os itens horizontalmente
-            text-align: center; /* Centraliza o texto 
-        }*/
-
         .logo-img {
-            height: 68px; /* Ajuste conforme o tamanho desejado */
+            height: 68px;
             width: auto;
-            margin-bottom: 10px; /* Espaço entre a imagem e o texto */
+            margin-bottom: 10px;
             border-radius: 10px;
         }
 
-        /* Se você adicionou a classe logo-text */
         .logo-text {
             display: block;
         }
         
-        /*.nav-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 9px 0;  Pode precisar aumentar o padding para acomodar o logo mais alto 
-        }*/
-
         .nav-menu {
             display: flex;
             list-style: none;
         }
         
         .nav-item {
-            margin-left: 30px;
+            margin-left: 1.875rem;
         }
         
         .nav-link {
             font-weight: 600;
             position: relative;
             transition: color 0.3s;
+            font-size: 1rem;
         }
         
         .nav-link:hover {
@@ -196,10 +206,11 @@
             width: 100%;
         }
         
-        /*.hamburger {
+        .hamburger {
             display: none;
             cursor: pointer;
-        }*/
+            font-size: 1.5rem;
+        }
         
         /* Hero Section */
         .hero {
@@ -215,31 +226,31 @@
         
         .hero-content {
             max-width: 680px;
-            padding: 30px 0; /*Adicione padding vertical menor */
+            padding: 1.875rem 0;
         }
         
         .hero-title {
-            font-size: 3.5rem;
+            font-size: 3rem;
             line-height: 1.2;
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
         
         .hero-description {
-            font-size: 1.2rem;
-            margin-bottom: 30px;
+            font-size: 1.125rem;
+            margin-bottom: 1.875rem;
             opacity: 0.9;
         }
         
         /* Sobre Section */
         .sobre {
-            padding: 100px 0;
+            padding: 6.25rem 0;
             background-color: white;
         }
         
         .sobre-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 60px;
+            gap: 3.75rem;
             align-items: center;
         }
         
@@ -250,25 +261,25 @@
         }
         
         .sobre-text h2 {
-            font-size: 2.2rem;
-            margin-bottom: 20px;
+            font-size: 2rem;
+            margin-bottom: 1.25rem;
         }
         
         .sobre-text p {
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
             color: #555;
         }
         
         /* Produtos Section */
         .produtos {
-            padding: 100px 0;
+            padding: 6.25rem 0;
             background-color: var(--secondary);
         }
         
         .produtos-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 30px;
+            gap: 1.875rem;
         }
         
         .produto-card {
@@ -301,19 +312,19 @@
         }
         
         .produto-info {
-            padding: 20px;
+            padding: 1.25rem;
         }
         
         .produto-title {
-            font-size: 1.4rem;
-            margin-bottom: 10px;
+            font-size: 1.25rem;
+            margin-bottom: 0.625rem;
         }
         
         .produto-price {
             color: var(--accent);
             font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 15px;
+            font-size: 1.125rem;
+            margin-bottom: 0.9375rem;
         }
         
         .produto-action {
@@ -324,19 +335,19 @@
         
         /* Processo Section */
         .processo {
-            padding: 100px 0;
+            padding: 6.25rem 0;
             background-color: white;
         }
         
         .steps {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
+            gap: 1.875rem;
         }
         
         .step {
             text-align: center;
-            padding: 30px;
+            padding: 1.875rem;
         }
         
         .step-icon {
@@ -348,36 +359,36 @@
             color: var(--accent);
             font-size: 2rem;
             border-radius: 50%;
-            margin: 0 auto 20px;
+            margin: 0 auto 1.25rem;
         }
         
         .step-title {
-            font-size: 1.5rem;
-            margin-bottom: 15px;
+            font-size: 1.375rem;
+            margin-bottom: 0.9375rem;
         }
         
         /* Depoimentos */
         .depoimentos {
-            padding: 100px 0;
+            padding: 6.25rem 0;
             background-color: var(--secondary);
         }
         
         .depoimentos-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+            gap: 1.875rem;
         }
         
         .depoimento {
             background-color: white;
-            padding: 30px;
+            padding: 1.875rem;
             border-radius: 8px;
             box-shadow: 0 5px 15px var(--shadow);
             position: relative;
         }
         
         .depoimento-text {
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
             font-style: italic;
         }
         
@@ -391,7 +402,7 @@
             height: 50px;
             border-radius: 50%;
             overflow: hidden;
-            margin-right: 15px;
+            margin-right: 0.9375rem;
         }
         
         .author-name {
@@ -414,30 +425,30 @@
         
         /* Contato Section */
         .contato {
-            padding: 100px 0;
+            padding: 6.25rem 0;
             background-color: white;
         }
         
         .contato-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 50px;
+            gap: 3.125rem;
         }
         
         .contato-info h3 {
-            font-size: 1.8rem;
-            margin-bottom: 20px;
+            font-size: 1.625rem;
+            margin-bottom: 1.25rem;
         }
         
         .contato-info p {
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
             color: #555;
         }
         
         .contato-detail {
             display: flex;
             align-items: center;
-            margin-bottom: 15px;
+            margin-bottom: 0.9375rem;
         }
         
         .contato-icon {
@@ -449,16 +460,16 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-right: 15px;
+            margin-right: 0.9375rem;
         }
         
         .form-group {
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
         
         .form-control {
             width: 100%;
-            padding: 12px 15px;
+            padding: 0.75rem 0.9375rem;
             border: 1px solid #ddd;
             border-radius: 4px;
             font-size: 1rem;
@@ -472,29 +483,29 @@
         footer {
             background-color: var(--dark);
             color: white;
-            padding: 60px 0 20px;
+            padding: 3.75rem 0 1.25rem;
         }
         
         .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 30px;
-            margin-bottom: 40px;
+            gap: 1.875rem;
+            margin-bottom: 2.5rem;
         }
         
         .footer-logo {
-            font-size: 1.8rem;
-            margin-bottom: 10px;
+            font-size: 1.625rem;
+            margin-bottom: 0.625rem;
         }
         
         .footer-desc {
             color: #bbb;
-            margin-bottom: 20px;
+            margin-bottom: 1.25rem;
         }
         
         .social-links {
             display: flex;
-            gap: 15px;
+            gap: 0.9375rem;
         }
         
         .social-link {
@@ -513,10 +524,10 @@
         }
         
         .footer-title {
-            font-size: 1.2rem;
-            margin-bottom: 20px;
+            font-size: 1.125rem;
+            margin-bottom: 1.25rem;
             position: relative;
-            padding-bottom: 10px;
+            padding-bottom: 0.625rem;
         }
         
         .footer-title::after {
@@ -534,7 +545,7 @@
         }
         
         .footer-link {
-            margin-bottom: 10px;
+            margin-bottom: 0.625rem;
         }
         
         .footer-link a {
@@ -548,7 +559,7 @@
         
         .copyright {
             text-align: center;
-            padding-top: 20px;
+            padding-top: 1.25rem;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #bbb;
             font-size: 0.9rem;
@@ -558,14 +569,15 @@
         @media (max-width: 992px) {
             .nav-menu {
                 position: fixed;
-                top: 80px;
+                top: 79px;
                 right: -100%;
                 background-color: white;
                 width: 250px;
-                height: calc(100vh - 80px);
+                height: calc(100vh - 79px);
                 flex-direction: column;
                 transition: right 0.3s;
                 box-shadow: -2px 0 5px var(--shadow);
+                z-index: 1000;
             }
             
             .nav-menu.active {
@@ -574,17 +586,13 @@
             
             .nav-item {
                 margin: 0;
-                padding: 15px 20px;
+                padding: 1rem 1.25rem;
                 border-bottom: 1px solid #eee;
             }
             
             .hamburger {
                 display: block;
                 font-size: 1.5rem;
-            }
-            
-            .hero-title {
-                font-size: 2.8rem;
             }
             
             .sobre-content,
@@ -595,38 +603,118 @@
             .sobre-image {
                 order: -1;
             }
+            
+            .btn {
+                padding: 0.625rem 1.25rem;
+                font-size: 0.9375rem;
+            }
         }
-        
+
         @media (max-width: 768px) {
+            .container {
+                width: 95%;
+                padding: 0 1rem;
+            }
+            
+            .hero {
+                height: auto;
+                padding: 3rem 0;
+            }
+            
+            .hero-content {
+                padding: 0;
+            }
+            
+            .hero-buttons {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                align-items: center;
+            }
+            
+            .hero-buttons .btn {
+                width: 100%;
+                max-width: 250px;
+                text-align: center;
+            }
+            
             .section-title {
-                font-size: 2rem;
+                margin-bottom: 2rem;
             }
             
-            .hero-title {
-                font-size: 2.2rem;
+            .section-title::after {
+                bottom: -0.625rem;
             }
             
-            .hero-description {
-                font-size: 1rem;
+            .sobre,
+            .produtos,
+            .processo,
+            .depoimentos,
+            .contato {
+                padding: 3rem 0;
+            }
+            
+            .steps {
+                gap: 1.5rem;
+            }
+            
+            .step {
+                padding: 1.5rem 1rem;
+            }
+            
+            .step-icon {
+                width: 60px;
+                height: 60px;
+                line-height: 60px;
+                font-size: 1.5rem;
+                margin: 0 auto 1rem;
+            }
+            
+            .depoimento {
+                padding: 1.5rem;
             }
             
             .footer-container {
                 grid-template-columns: 1fr;
+                gap: 1.5rem;
             }
         }
-        
+
         @media (max-width: 576px) {
-            .container {
-                width: 95%;
-                padding: 0 10px;
+            .logo-img {
+                height: 50px;
             }
             
-            .hero-title {
-                font-size: 1.8rem;
+            .produto-card {
+                max-width: 320px;
+                margin: 0 auto;
             }
             
-            .produtos-grid {
-                grid-template-columns: 1fr;
+            .produto-action {
+                flex-direction: column;
+                gap: 0.625rem;
+            }
+            
+            .produto-action .btn {
+                width: 100%;
+                text-align: center;
+            }
+            
+            .depoimento-author {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            
+            .author-image {
+                margin-bottom: 0.625rem;
+            }
+            
+            .form-group {
+                margin-bottom: 1rem;
+            }
+            
+            .form-control {
+                padding: 0.75rem;
             }
         }
     </style>
@@ -636,7 +724,7 @@
     <header>
         <div class="container nav-container">
             <a href="#" class="logo">
-                <img src="images/BUG RUG logo horizontal 18x4,5_2.jpg" class="logo-img">
+                <img src="images/BUG RUG logo horizontal 18x4,5_2.jpg" class="logo-img" alt="BUG RUG Logo">
             </a>
             
             <ul class="nav-menu">
@@ -917,4 +1005,53 @@
                     <p class="footer-desc">Transformando espaços com arte criativa feita à mão. Cada peça é única e criada com paixão pelo artesanato.</p>
                     <div class="social-links">
                         <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="footer-title">Links Rápidos</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#inicio">Início</a></li>
+                        <li class="footer-link"><a href="#sobre">Sobre</a></li>
+                        <li class="footer-link"><a href="#produtos">Produtos</a></li>
+                        <li class="footer-link"><a href="#processo">Processo</a></li>
+                        <li class="footer-link"><a href="#contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="footer-title">Produtos</h3>
+                    <ul class="footer-links">
+                        <li class="footer-link"><a href="#produtos">Tapetes</a></li>
+                        <li class="footer-link"><a href="#produtos">Arte de Parede</a></li>
+                        <li class="footer-link"><a href="#produtos">Almofadas</a></li>
+                        <li class="footer-link"><a href="#produtos">Peças Personalizadas</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 BUG RUG. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Script para o menu mobile -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const hamburger = document.querySelector('.hamburger');
+            const navMenu = document.querySelector('.nav-menu');
+            
+            hamburger.addEventListener('click', function() {
+                navMenu.classList.toggle('active');
+            });
+            
+            // Fechar menu ao clicar em um item
+            document.querySelectorAll('.nav-link').forEach(function(item) {
+                item.addEventListener('click', function() {
+                    navMenu.classList.remove('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
